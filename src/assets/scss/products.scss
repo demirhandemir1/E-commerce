@@ -1,0 +1,103 @@
+@import './colors.scss';
+@import '../variables.scss';
+
+.product-list{
+  &-title{
+    font-size: 20px;
+    color: #707070;
+    font-weight: $fw-300;
+  }
+  &__wrp{
+    margin: 0 -10px 0 -10px;
+  }
+  &__cell{
+    width: calc(100% / 5);
+    padding: 0 10px 30px 10px;
+    @media (max-width: $largeScreen) {
+      width: calc(100% / 3);
+    }
+    @media (max-width: $tabletScreen) {
+      width: calc(100% / 2);
+    }
+  }
+  &__item{
+    height: 350px;
+    padding: 12px;
+    background:white;
+    border: 1px solid #E2E7E9;
+    border-radius: 10px;
+    transition: all .3s;
+    @media (max-width: $mobile) {
+      height: 325px;
+    }
+    &:hover{
+      box-shadow: #7171712e 1px 8px 30px 2px;
+      &.selected{
+        box-shadow: #50b64857 1px 8px 30px 2px;
+      }
+    }
+    img{
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+      @media (max-width: $mobile) {
+        height: 140px;
+      }
+    }
+    &.selected{
+      background-color: #3dbd4294;
+      border-color: #8cc758;
+      .product-list__name{
+        color:black;
+      }
+      .quantity{
+        border-color:white;
+      }
+    }
+  }
+  &__name{
+    font-size:15px;
+    color: #555555;
+    font-weight: $fw-600;
+    height: 35px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all .3s;
+  }
+  &__price{
+    font-size: 22px;
+    color: #1f1f1f;
+    font-weight: $fw-600;
+  }
+  &__add-basket{
+    height: 36px;
+    color: $blue-main;
+    font-size: 15px;
+    font-weight: $fw-600;
+    border-radius: 22px;
+    border: 1px solid $blue-main;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover{
+      background-color: #064dc314;
+    }
+  }
+  .react-rater{
+    text-align: right;
+    @media (max-width: $mobile) {
+      text-align: right;
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-end;
+    }
+    &-star{
+      font-size: 16px;
+      @media (max-width: $mobile) {
+        font-size: 10px;
+      }
+    }
+  }
+}

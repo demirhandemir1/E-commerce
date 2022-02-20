@@ -1,0 +1,130 @@
+@import '../../variables.scss';
+
+.footer{
+  position: relative;
+  z-index: 9;
+  background-color: #F2F2F2;
+  padding: 145px 0 0;
+  margin-top: 85px;
+  @media (max-width: $tabletScreen) {
+    padding-top: 50px;
+  }
+  &-app{
+    position: relative;
+    background-color: white;
+    height: 222px;
+    border-radius: 111px;
+    @media (max-width: $tabletScreen) {
+      height: auto;
+      border-radius: 24px;
+      padding: 40px
+    }
+
+    &__logos{
+      @media (max-width: $tabletScreen) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    
+    &__detail{
+      margin-left: 40px;
+      @media (max-width: $mobile) {
+        margin-left: 0;
+      }
+    }
+    &__image{
+      position: relative;
+      top: -4.3em;
+      @media (max-width: $tabletScreen) {
+        text-align: center;
+      }
+      img{
+        width: 352px;
+        @media (max-width: $tabletScreen) {
+          width: 100%;
+        }
+      }
+    }
+   
+    &__qr-image{
+      width: 60px;
+      margin-right: 20px;
+    }
+    &__text{
+      color:black;
+      font-size: 18px;
+      font-weight: 800;
+      @media (max-width: $mobile) {
+        text-align: center;
+      }
+    }
+    &__small-text{
+      color:black;
+      font-size: 16px;
+      @media (max-width: $mobile) {
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &-main{
+    padding: 100px 0;
+    &__logo{
+      width: 209px;
+    }
+    &__social{
+      margin: 30px 0 20px;
+      img{
+        margin-right: 30px;
+      }
+    }
+    &__kvkk{
+      font-size: 15px;
+    }
+  }
+
+  &-link{
+    text-align: center;
+    @media (max-width: $tabletScreen) {
+     display: none;
+    }
+    &__title{
+      font-size: 18px;
+      color: #044DC3;
+      margin-bottom: 10px;
+    }
+    a{
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &-desc{
+    max-width: 1320px;
+    width: 85%;
+    margin: 0 auto;
+    @media (max-width: $tabletScreen) {
+      display: none;
+    }
+    &__text{
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  &-copyright{
+    background-color: #E6E6E6;
+    margin-top: 50px;
+    @media (max-width: $tabletScreen) {
+      display: none;
+    }
+    &__text{
+      padding: 18px;
+      text-align: center;
+    }
+  }
+}
